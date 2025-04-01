@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { User, Trophy, Code, BarChart2, Calendar, FireExtinguisher, Fire, Award } from 'lucide-react';
+import { User, Trophy, Code, BarChart2, Calendar, Award, Flame, CheckCircle } from 'lucide-react';
 
 // Sample user profile data
 const profileData = {
@@ -71,7 +71,7 @@ const Profile: React.FC = () => {
                   <div className="flex justify-between items-center">
                     <span className="text-muted-foreground">Streak</span>
                     <div className="flex items-center gap-1">
-                      <Fire className="h-4 w-4 text-amber-500" />
+                      <Flame className="h-4 w-4 text-amber-500" />
                       <span className="font-semibold">{profileData.streak} days</span>
                     </div>
                   </div>
@@ -150,7 +150,7 @@ const Profile: React.FC = () => {
                   <Card>
                     <CardHeader className="pb-2">
                       <CardTitle className="text-lg flex items-center gap-2">
-                        <Fire className="h-5 w-5 text-amber-500" />
+                        <Flame className="h-5 w-5 text-amber-500" />
                         Streak
                       </CardTitle>
                     </CardHeader>
@@ -204,7 +204,7 @@ const Profile: React.FC = () => {
                         <div key={index} className="flex items-start gap-4 p-3 bg-muted rounded-lg">
                           <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
                             {activity.action === 'Solved' ? (
-                              <Check className="w-5 h-5 text-green-500" />
+                              <CheckCircle className="w-5 h-5 text-green-500" />
                             ) : (
                               <Code className="w-5 h-5 text-amber-500" />
                             )}
